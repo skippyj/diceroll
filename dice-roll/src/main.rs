@@ -1,8 +1,8 @@
 fn roll_dice(inp: String) {
     use regex::Regex;
     use rand::Rng;
-    // "r" prefix denotes raw string, basically automatic backslash escaping
     let val = &inp.trim();
+    // "r" prefix denotes raw string, basically automatic backslash escaping
     let rx = Regex::new(r"(?P<amount>\d+)(d)(?P<sides>\d+)").unwrap();
     let grp = rx.captures(val).unwrap();
     let amount = &grp["amount"];
