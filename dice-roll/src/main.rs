@@ -11,7 +11,7 @@ fn roll_dice(inp: String) {
     
     println!("\nRolled {}", &val);
     for i in 0..amount.parse::<i32>().unwrap() {
-        println!("Dice {}: {}", i, rng.gen_range(0, sides.parse::<i32>().unwrap()));
+        println!("Dice {}: {}", i, rng.gen_range(1, sides.parse::<i32>().unwrap()));
     }
 }
 
